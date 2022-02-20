@@ -60,8 +60,8 @@ $(window).load(function() {
      if (!['INIT_STATE', 'PRESENCE_UPDATE'].includes(msg.t)) return;
        let user = msg.d;
         // bağımsız olarak çalışıyor
-        document.getElementsByClassName("adisspp")[0].src = `https://cdn.discordapp.com/avatars/342360490422566913/${user.discord_user.avatar}?size=4096` 
-        document.getElementsByClassName("adisspp2")[0].src = `https://cdn.discordapp.com/avatars/342360490422566913/${user.discord_user.avatar}?size=4096` 
+        document.getElementsByClassName("adisspp")[0].src = `https://cdn.discordapp.com/avatars/775710258026119168/${user.discord_user.avatar}?size=4096` 
+        document.getElementsByClassName("adisspp2")[0].src = `https://cdn.discordapp.com/avatars/775710258026119168/${user.discord_user.avatar}?size=4096` 
        if (user.discord_status == "online") {
             document.getElementsByClassName("status")[0].src = "https://emoji.gg/assets/emoji/8312-online.png"
         } else if (user.discord_status == "idle") {
