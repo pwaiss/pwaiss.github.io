@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pwais</title>
+    <link rel="icon" type="image/x-icon" href="fav.ico">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/uuq2ojl.css">
+</head>
+<style>
+    html {
+        margin: 0px;
+        height: 100%;
+        width: 100%;
+    }
+ 
+     body {
+        font-family: articulat-cf, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #fff!important;
+        background-color: #1e1e24 !important;
+        margin: 0px;
+        min-height: 100%;
+        width: 100%;
+    }
+
+    .cover-container{
+        max-width: 62em;
+    }
+
+    .code-text{
+        letter-spacing: -1.5px;
+        font-family: fenwick, sans-serif !important;;   
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .social-btn{
+        background-color: white; 
+        color: #22252c; 
+        border-color: transparent;
+    }
+
+    .pwais, .javascript{
+        font-weight: 700;
+        background-color: red;
+        background-image: linear-gradient(45deg, #FEAD7B, #DF6363);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+
+    .javascript{
+        background-image: linear-gradient(45deg, #F1E507, #F29C00);
+    }
+
+    .me-4 button:hover{
+        transition: 0.2s;
+        color: white !important;
+        background-color: #22252c !important;
+        border-color: white !important;
+    }
+
+    footer, header{
+        user-select: none;
+    }
+
+    footer p:hover{
+        transition: 0.2s;
+        opacity: 1 !important;
+    }
+
+    footer p a:hover{
+        transition: 0.2s;
+        text-decoration: underline !important;
+    }
+
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
+    main{
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+  padding: 0;
+  margin: 0;
+	 position: relative;
+	 display: inline-block;
+	 margin: 35px auto;
+}
+ .header-wrap {
+	 display: block;
+	 width: auto;
+	 height: auto;
+	 padding: 0;
+	 text-align: center;
+	 font-size: 25px;
+	 font-family: 'Press Start 2P', cursive;
+	 transform: perspective(200px) rotateX(10deg);
+	 letter-spacing: 0.1em;
+	 user-select: none;
+	 text-shadow: 0 -1px 0 #fff, 0 1px 0 #004d40, 0 2px 0 #00483b, 0 3px 0 #004639, 0 4px 0 #004336, 0 5px 0 #004134, 0 6px 0 #003f32, 0 7px 0 #003d30, 0 8px 0 #003a2d, 0 9px 0 #00382b, 0 10px 0 #003528, 0 11px 0 #003225, 0 12px 0 #002f22, 0 13px 0 #002b1e, 0 14px 0 #00281c, 0 15px 0 #001f13, 0 22px 30px rgba(0, 0, 0, 0.9), 0 22px 30px rgba(0, 0, 0, 0.9), 0 22px 15px rgba(0, 0, 0, 0.9), 0 11px 15px rgba(0, 0, 0, 0.9), 0 15px 20px rgba(0, 0, 0, 0.9), 0 15px 11px rgba(0, 0, 0, 0.9), 0 16px 11px rgba(0, 0, 0, 0.9);
+	 transition: text-shadow 0.3s ease 0.3s, transform 0.3s ease 0.3s, letter-spacing 0.3s ease 0.3s;
+}
+ .header-wrap:hover {
+	 transition: text-shadow 0.33s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+	 text-shadow: 0 0 0 #004134, 0 1px 0 #00483b, 0 2px 0 #003528, 0 3px 3px rgba(0, 0, 0, 0.9);
+	 transform: translate(0px, 15px) perspective(200px) rotateX(10deg);
+	 letter-spacing: 0.125em;
+}
+ .retro-btn {
+	 text-transform: uppercase;
+	 background: 0 0;
+}
+ .retro-btn.lg .btn {
+	 width: 294px;
+	 height: 54px;
+	 font-size: 17px;
+	 line-height: 50px;
+}
+ .retro-btn.lg .btn .btn-inner .content-wrapper .btn-content .btn-content-inner:before {
+	 padding-top: 0;
+	 letter-spacing: 0.15em;
+}
+ .retro-btn.sm .btn {
+	 width: 165px;
+	 height: 37px;
+	 font-size: 10.5px;
+	 line-height: 32.5px;
+}
+ .retro-btn.sm .btn .btn-inner .content-wrapper .btn-content .btn-content-inner:before {
+	 padding-top: 0;
+}
+
+ .retro-btn.warning .btn .btn-inner .content-wrapper:before {
+	 background-color: #6a3800;
+}
+ .retro-btn.warning .btn .btn-inner .content-wrapper .btn-content {
+	 background-color: #f80;
+}
+ .retro-btn .btn {
+	 -webkit-user-select: none;
+	 -moz-user-select: none;
+	 -ms-user-select: none;
+	 user-select: none;
+	 -webkit-box-sizing: border-box;
+	 box-sizing: border-box;
+	 display: inline-block;
+	 vertical-align: middle;
+	 padding-top: 3px;
+	 position: relative;
+	 cursor: pointer;
+	 font-weight: 600;
+	 font-family: inherit;
+	 font-style: normal;
+	 letter-spacing: 0;
+	 text-rendering: auto;
+	 text-decoration: none;
+	 text-align: center;
+	 -webkit-transition: opacity 0.1s ease-out;
+	 transition: opacity 0.1s ease-out;
+	 z-index: 5;
+	 -webkit-font-smoothing: antialiased;
+	 width: 240px;
+	 height: 46px;
+	 font-size: 12px;
+	 line-height: 24px;
+	 background-color: transparent;
+	 text-decoration-color: initial;
+	 border-color: initial;
+	 -webkit-tap-highlight-color: transparent;
+}
+ .retro-btn .btn, .retro-btn .btn:focus {
+	 outline-color: 0;
+	 outline-style: none;
+     border: none;
+	 outline-width: 0;
+}
+ .retro-btn .btn:hover .btn-content-inner:before {
+	 background-color: rgba(13, 13, 13, .1);
+}
+ .retro-btn .btn:before {
+	 content: " ";
+	 width: calc(100% - 2px);
+	 height: calc(100% - 4px);
+	 bottom: -1px;
+	 left: 1px;
+	 position: absolute;
+	 border-radius: 3px;
+	 z-index: 1;
+	 -webkit-transition: background 0.12s ease-out, -webkit-transform 0.12s ease-out;
+	 transition: background 0.12s ease-out, -webkit-transform 0.12s ease-out;
+	 transition: transform 0.12s ease-out, background 0.12s ease-out;
+	 transition: transform 0.12s ease-out, background 0.12s ease-out, -webkit-transform 0.12s ease-out;
+}
+ .retro-btn .btn.btn-left:before {
+	 -webkit-transform: skewY(1deg) translate3d(0, -0.5px, 0);
+	 transform: skewY(1deg) translate3d(0, -0.5px, 0);
+}
+ .retro-btn .btn.btn-left .btn-content {
+	 -webkit-transform: skewY(-1deg);
+	 transform: skewY(-1deg);
+}
+ .retro-btn .btn.btn-right:before {
+	 -webkit-transform: skewY(-1deg) translate3d(0, -0.5px, 0);
+	 transform: skewY(-1deg) translate3d(0, -0.5px, 0);
+}
+ .retro-btn .btn.btn-right .btn-content {
+	 -webkit-transform: skewY(1deg);
+	 transform: skewY(1deg);
+}
+ .retro-btn .btn.btn-center:before {
+	 -webkit-transform: translate3d(0, -1px, 0);
+	 transform: translate3d(0, -1px, 0);
+}
+ .retro-btn .btn.btn-center .btn-content {
+	 -webkit-transform: translate3d(0, 1px, 0);
+	 transform: translate3d(0, 1px, 0);
+}
+ .retro-btn .btn.btn-active .btn-inner .content-wrapper .btn-content {
+	 -webkit-transition: background 0.12s ease-out, color 0.12s ease-out, -webkit-transform 0.12s ease-out;
+	 transition: background 0.12s ease-out, color 0.12s ease-out, -webkit-transform 0.12s ease-out;
+	 transition: transform 0.12s ease-out, background 0.12s ease-out, color 0.12s ease-out;
+	 transition: transform 0.12s ease-out, background 0.12s ease-out, color 0.12s ease-out, -webkit-transform 0.12s ease-out;
+	 -webkit-transform: translate3d(0, 2px, 0);
+	 transform: translate3d(0, 2px, 0);
+}
+ .retro-btn .btn.btn-active .btn-inner .content-wrapper .btn-content .btn-content-inner {
+	 opacity: 0.1;
+}
+ .retro-btn .btn.btn-active:before {
+	 -webkit-transform: translate3d(0, -3px, 0);
+	 transform: translate3d(0, -3px, 0);
+}
+ .retro-btn .btn .btn-inner {
+	 display: block;
+	 height: 100%;
+}
+ .retro-btn .btn .btn-inner .content-wrapper {
+	 position: relative;
+	 font-family: inherit;
+	 display: -webkit-box;
+	 display: -ms-flexbox;
+	 display: flex;
+	 -webkit-box-align: stretch;
+	 -ms-flex-align: stretch;
+	 align-items: stretch;
+	 width: 100%;
+	 height: calc(100% - 3px);
+	 margin-top: -3px;
+}
+ .retro-btn .btn .btn-inner .content-wrapper:after, .retro-btn .btn .btn-inner .content-wrapper:before, .retro-btn .btn .btn-inner .content-wrapper .btn-content:after, .retro-btn .btn .btn-inner .content-wrapper .btn-content:before, .retro-btn .btn .btn-inner .content-wrapper .btn-content .btn-content-inner:before {
+	 display: block;
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 top: 0;
+	 left: 0;
+}
+ .retro-btn .btn .btn-inner .content-wrapper:before {
+	 background-image: initial;
+	 background-color: #004d40;
+	 content: " ";
+	 border-radius: 3px;
+	 top: auto;
+	 bottom: -3px;
+	 z-index: 1;
+	 -webkit-transition: background 0.185s ease-out, -webkit-transform 0.185s ease-out;
+	 transition: background 0.185s ease-out, -webkit-transform 0.185s ease-out;
+	 transition: transform 0.185s ease-out, background 0.185s ease-out;
+	 transition: transform 0.185s ease-out, background 0.185s ease-out, -webkit-transform 0.185s ease-out;
+}
+ .retro-btn .btn .btn-inner .content-wrapper:after {
+	 background-color: rgba(13, 13, 13, 0.15);
+	 content: " ";
+	 border-radius: 3px;
+	 z-index: 3;
+	 width: 0;
+	 top: 2px;
+}
+ .retro-btn .btn .btn-inner .content-wrapper .btn-content {
+	 background-image: initial;
+	 background-color: #26a69a;
+	 color: #ebf1f8;
+	 position: relative;
+	 display: -webkit-box;
+	 display: -ms-flexbox;
+	 display: flex;
+	 -webkit-box-flex: 1;
+	 -ms-flex: 1;
+	 flex: 1;
+	 -webkit-box-align: center;
+	 -ms-flex-align: center;
+	 align-items: center;
+	 -webkit-box-pack: center;
+	 -ms-flex-pack: center;
+	 justify-content: center;
+	 border-radius: 3px;
+	 text-indent: 0;
+	 z-index: 3;
+	 overflow: hidden;
+	 padding: 0 16px;
+	 -webkit-transition: border 0.185s ease-out, background 0.185s ease-out, color 0.185s ease-out, -webkit-transform 0.185s ease-out;
+	 transition: border 0.185s ease-out, background 0.185s ease-out, color 0.185s ease-out, -webkit-transform 0.185s ease-out;
+	 transition: border 0.185s ease-out, transform 0.185s ease-out, background 0.185s ease-out, color 0.185s ease-out;
+	 transition: border 0.185s ease-out, transform 0.185s ease-out, background 0.185s ease-out, color 0.185s ease-out, -webkit-transform 0.185s ease-out;
+}
+ .retro-btn .btn .btn-inner .content-wrapper .btn-content:before, .retro-btn .btn .btn-inner .content-wrapper .btn-content:after {
+	 display: -webkit-box;
+	 display: -ms-flexbox;
+	 display: flex;
+	 -webkit-box-align: center;
+	 -ms-flex-align: center;
+	 align-items: center;
+	 -webkit-box-pack: center;
+	 -ms-flex-pack: center;
+	 justify-content: center;
+	 color: rgba(255, 255, 255, .8);
+	 opacity: 0;
+	 -webkit-transition: opacity 0.1125s ease-out 0.05s, -webkit-transform 0.185s ease-out 0.05s;
+	 transition: opacity 0.1125s ease-out 0.05s, -webkit-transform 0.185s ease-out 0.05s;
+	 transition: transform 0.185s ease-out 0.05s, opacity 0.1125s ease-out 0.05s;
+	 transition: transform 0.185s ease-out 0.05s, opacity 0.1125s ease-out 0.05s, -webkit-transform 0.185s ease-out 0.05s;
+}
+ .retro-btn .btn .btn-inner .content-wrapper .btn-content:before {
+	 content: " ";
+	 -webkit-transform: translate3d(0, 50%, 0);
+	 transform: translate3d(0, 50%, 0);
+}
+ .retro-btn .btn .btn-inner .content-wrapper .btn-content:after {
+	 content: " ";
+	 -webkit-transform: translate3d(0, -50%, 0);
+	 transform: translate3d(0, -50%, 0);
+}
+ .retro-btn .btn .btn-inner .content-wrapper .btn-content .btn-content-inner {
+	 display: block;
+	 -webkit-transition: opacity 75ms ease-out 0.1125s;
+	 transition: opacity 75ms ease-out 0.1125s;
+}
+ .retro-btn .btn .btn-inner .content-wrapper .btn-content .btn-content-inner:before {
+	 content: attr(label);
+	 padding-top: 9.5px;
+	 font-size: 0.8em;
+	 font-family: 'Press Start 2P', cursive;
+	 letter-spacing: 0.06em;
+	 -webkit-transition: opacity 0.3s ease-out, background-color 0.1125s ease-in;
+	 transition: opacity 0.3s ease-out, background-color 0.1125s ease-in;
+	 opacity: 1;
+	 z-index: -1;
+}
+ .loader-button {
+	 position: relative;
+	 display: inline-block;
+	 padding: 0 60px;
+	 outline: none;
+	 border: none;
+	 background: #1d9650;
+	 color: #fff;
+	 text-transform: uppercase;
+	 letter-spacing: 1px;
+	 font-size: 1em;
+	 font-family: 'Press Start 2P', cursive;
+	 transform: perspective(400px) rotateX(6deg);
+	 line-height: 4;
+	 padding: 0;
+	 overflow: visible;
+	 -webkit-backface-visibility: hidden;
+	 backface-visibility: hidden;
+	 cursor: pointer;
+	 border-radius: 6px;
+	 box-shadow: 0 5px 15px rgba(0, 0, 0, .7);
+	 transition: color 0.1s ease-in 0.1s, transform 0.185s ease-in, box-shadow 0.15s ease-in;
+}
+ .loader-button.btn-active {
+	 color: #148544;
+	 box-shadow: 0 3px 2px rgba(0, 0, 0, .3);
+}
+ .loader-button.btn-active .content {
+	 transform: translateY(-3px);
+}
+ .loader-button.state-loading .content {
+	 -webkit-transform: translateY(-12px);
+	 transform: translateY(-12px);
+}
+ .loader-button[disabled], .loader-button[disabled].state-loading {
+	 cursor: default;
+}
+ .loader-button.state-success .content:before, .loader-button.state-error .content:after {
+	 opacity: 1;
+}
+ .loader-button .content {
+	 position: relative;
+	 display: block;
+	 z-index: 10;
+	 padding: 0 60px;
+	 background: #1d9650;
+	 transform: translateY(-6px);
+	 -webkit-transition: -webkit-transform 0.2s;
+	 transition: transform 0.2s;
+	 border-radius: 4px;
+}
+ .loader-button .content:before, .loader-button .content:after {
+	 position: absolute;
+	 right: 20px;
+	 color: #fff;
+	 opacity: 0;
+	 -webkit-transition: opacity 0.3s 0.3s;
+	 transition: opacity 0.3s 0.3s;
+}
+ .loader-button .content:before {
+	 content: "✔";
+	 font-size: 25.5px;
+	 top: -22.9px;
+	 right: 30px;
+	 transform: perspective(400px) rotateX(39deg);
+}
+ .loader-button .content:after {
+	 content: "✖";
+	 font-size: 25.5px;
+	 top: -22.9px;
+	 right: 30px;
+	 transform: perspective(400px) rotateX(39deg);
+}
+ .loader-button .progress {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background: #0b562b;
+	 border-radius: 4px;
+}
+ .loader-button .progress-inner {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 0;
+	 height: 100%;
+	 background: linear-gradient(0.25turn, #07351b, #062c16);
+	 border-radius: 4px;
+	 -webkit-transition: width 0.3s, opacity 0.3s;
+	 transition: width 0.3s, opacity 0.3s;
+}
+ .notransition {
+	 -webkit-transition: none !important;
+	 transition: none !important;
+}
+ 
+</style>
+<body class="d-flex h-100 text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column scrollbar scrollbar-primary" style="overflow-x: hidden;">
+        <header class="mb-auto">
+            <div class="d-flex">
+              <h3 class="float-md-start code-text mt-auto mb-auto">pw</h3>
+              <h6 class="float-md-start code-text ms-auto mt-auto mb-auto" style="opacity: 10%;">team lunny dev.</h6>
+            </div>
+        </header>
+        <main class="px-3 text-start" style="overflow-y: scroll;">
+            <div style="height: 30%;"></div>
+            <div class="d-flex">
+                <h1 class="mt-auto mb-auto fs-1">Hey I'm <span class="pwais">Pwais</span> <img style="width: 45px;" class="ml-2 mb-2"  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/waving-hand_1f44b.png"> <p class="lead d-flex">Hi! I am a student from Turkey. We are writing scripts in FiveM using LUA, CSS, HTML, and Javascript. I'm also working to become better at front-end development.
+                    <br> I am currently a member of the Lunny Developments team.
+                </p></h1>
+                <img style="width: 300px;" class="float-end" src="https://cdn.discordapp.com/attachments/1030921258705100922/1036381832360501248/Baslksz-1.pngasdasd.png">
+            </div>
+            <div style="height: 35%;"></div>
+            <div class="d-flex">
+                <h1 class="mt-auto mb-auto fs-1 me-4" style="white-space: nowrap;">If you want to contact me <img style="width: 45px;" class="ml-2 mb-2"  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/mobile-phone-with-arrow_1f4f2.png"> <div class="mb-3 d-flex">
+                        <a href="https://www.youtube.com/channel/UCCdV674bOzPXEzIz_ZVP-_A" target="_blank">
+                            <button  class="btn btn-secondary d-flex ms-2 social-btn" title="Youtube">
+                                <svg   width="20" height="20" fill="currentColor" class="bi bi-youtube m-auto" viewBox="0 0 16 16">
+                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
+                                </svg>
+                            </button>
+                        </a>
+                        <a href="https://open.spotify.com/user/5lxj0pa23pvstmmetwk2jl03j?si=e31c0ada2aa14252&nd=1" target="_blank">
+                            <button  class="btn btn-secondary d-flex ms-2 social-btn" title="Spotify">
+                                <svg   width="20" height="20" fill="currentColor" class="bi bi-spotify m-auto" viewBox="0 0 16 16">
+                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z"></path>
+                                  </svg>
+                            </button>
+                        </a>
+                    </div>
+                    <p data-sourcepos="1:1-1:253" dir="auto"><a href="https://github.com/kittinan/spotify-github-profile"><img src="https://spotify-github-profile.vercel.app/api/view?uid=5lxj0pa23pvstmmetwk2jl03j&cover_image=true&theme=natemoo-re&show_offline=false&bar_color=53b14f&bar_color_cover=false" alt="spotify-github-profile" style="max-width: 100%; width: 75%;"></a></p>
+                </h1>
+                <p data-sourcepos="2:1-2:117" dir="auto"><a href="https://discord.com/users/775710258026119168" rel="nofollow"><img src="https://lanyard.cnrad.dev/api/775710258026119168" alt="Discord Presence"></a></p>
+            </div>
+            <div style="height: 20%;"></div>
+            <div class="d-inline-flex mb-5">
+                <div class="d-block pe-3">
+                    <h1 style="white-space: nowrap" class="mt-auto mb-auto fs-1 me-4">Language & Software  <img style="width: 45px;" class="ml-2 mb-2"  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/technologist_1f9d1-200d-1f4bb.png"></h1>
+                    <p class="fs-5 mt-3"><kbd>HTML</kbd></p>
+                    <div class="progress" style="border-radius: 100px; background-color: #22252c;">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="color: #22252c;width: 85%; background-color: #DF6363;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+                    </div>
+                    <p class="fs-5 mt-3"><kbd>CSS</kbd></p>
+                    <div class="progress" style="border-radius: 100px; background-color: #22252c;">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="color: #22252c;width: 90%; background-color: #DF6363;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+                    </div>
+                    <p class="fs-5 mt-3"><kbd>JavaScript</kbd></p>
+                    <div class="progress" style="border-radius: 100px; background-color: #22252c;">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="color: #22252c;width: 65%; background-color: #DF6363;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
+                    </div>
+                    <p class="fs-5 mt-3"><kbd>LUA</kbd></p>
+                    <div class="progress" style="border-radius: 100px; background-color: #22252c;">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="color: #22252c;width: 75%; background-color: #DF6363;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                    </div>
+                    <p class="fs-5 mt-3"><kbd>Python</kbd></p>
+                    <div class="progress" style="border-radius: 100px; background-color: #22252c;">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="color: #22252c;width: 56%; background-color: #DF6363;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">56%</div>
+                    </div>
+                    <p class="fs-5 mt-3"><kbd>C#</kbd></p>
+                    <div class="progress" style="border-radius: 100px; background-color: #22252c;">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label" style="color: #22252c;width: 35%; background-color: #DF6363;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">35%</div>
+                    </div>
+                </div>
+                <div class="d-block ps-3">
+                    <h1 style="white-space: nowrap" class="mt-auto mb-auto fs-1 me-4">Education / Experience  <img style="width: 45px; position: relative; bottom: 4px;" class="ml-2 mb-2"  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/school_1f3eb.png"></h1>
+                    <p class="fs-5 fw-semibold mb-0 d-flex">
+                        <span style="width: 10px; height: 10px; background-color: #DF6363; margin: auto 10px; margin-left: 0;" class="rounded-circle"></span> 
+                        High School
+                    </p>
+                    <p class="fs-6 fw-light mt-0"><span class="fst-italic">2020 — 2024</span></p>
+                </div>
+            </div>
+            <div style="height: 10%;"></div>
+            <div class=" mb-5">
+                <h1 class="mt-auto mb-auto fs-1 me-5">My team <img style="width: 45px;" class="ml-2 mb-2"  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/office-building_1f3e2.png"> </h1>
+                <div class="d-flex mt-3 justify-content-center">
+                    <div class="d-flex flex-column me-5">
+                        <img style="left: 0px;" class="position-relative ms-auto me-auto" src="https://cdn.discordapp.com/attachments/954475755440599140/1035964678687428658/Baslksz-1.png" width="120">
+                        <p class="ms-auto me-auto fs-5 fw-normal mb-0">Pwais</p>
+                        <kbd style="width: max-content;font-size: 12px; background-color: #efb7ce; color: #8b2052; margin: auto 0; margin-left: 10px" class="fw-lighter ms-auto me-auto mt-1">back-end</kbd>
+                        <kbd style="width: max-content;font-size: 12px; background-color: #b7e2ef; color: #20698b; margin: auto 0; margin-left: 10px" class="fw-lighter ms-auto me-auto mt-1">front-end</kbd>
+                        <p class="fs-6 fw-lighter me-auto ms-auto mt-1 mb-0">Profession: <span class="fw-normal">LUA, JS</span></p>
+                        <a class="ms-auto me-auto" target="_blank" href="https://discord.com/users/775710258026119168"><button  class="btn btn-light mt-1">Contact</button></a>
+                    </div>
+                    <div class="d-flex flex-column me-5">
+                        <img style="left: 9px;" class="position-relative ms-auto me-auto" src="https://cdn.discordapp.com/attachments/803725661977575475/1033108914016878612/cure40-boy-26.png" width="120">
+                        <p class="ms-auto me-auto fs-5 fw-normal mb-0">Cure</p>
+                        <kbd style="width: max-content;font-size: 12px; background-color: #b7e2ef; color: #20698b; margin: auto 0; margin-left: 10px" class="fw-lighter ms-auto me-auto mt-1">front-end</kbd>
+                        <p class="fs-6 fw-lighter me-auto ms-auto mt-1 mb-0">Profession: <span class="fw-normal">JavaScript</span></p>
+                        <a class="ms-auto me-auto" target="_blank" href="https://discord.com/users/754969692585852939"><button  class="btn btn-light mt-1">Contact</button></a>
+                    </div>
+                    <div class="d-flex flex-column me-5">
+                        <img style="left: 9px;" class="position-relative ms-auto me-auto" src="https://cdn.discordapp.com/attachments/906104287501877309/1033070965170638889/image5.jpg" width="120">
+                        <p class="ms-auto me-auto fs-5 fw-normal mb-0">Adis</p>
+                        <kbd style="width: max-content;font-size: 12px; background-color: #efb7ce; color: #8b2052; margin: auto 0; margin-left: 10px" class="fw-lighter ms-auto me-auto mt-1">back-end</kbd>
+                        <p class="fs-6 fw-lighter me-auto ms-auto mt-1 mb-0">Profession: <span class="fw-normal">LUA</span></p>
+                        <a class="ms-auto me-auto" target="_blank" href="https://discord.com/users/342360490422566913"><button  class="btn btn-light mt-1">Contact</button></a>
+                    </div>
+                    <div class="d-flex flex-column me-5">
+                        <img style="left: 0px;" class="position-relative ms-auto me-auto" src="https://cdn.discordapp.com/attachments/906223323569090610/1033083692811292783/image0.jpg" width="120">
+                        <p class="ms-auto me-auto fs-5 fw-normal mb-0">Lunny</p>
+                        <kbd style="width: max-content;font-size: 12px; background-color: #efb7ce; color: #8b2052; margin: auto 0; margin-left: 10px" class="fw-lighter ms-auto me-auto mt-1">back-end</kbd>
+                        <p class="fs-6 fw-lighter me-auto ms-auto mt-1 mb-0">Profession: <span class="fw-normal">LUA</span></p>
+                        <a class="ms-auto me-auto" target="_blank" href="https://discord.com/users/851852767831130122"><button  class="btn btn-light mt-1">Contact</button></a>
+                    </div>
+                    <div class="d-flex flex-column me-5">
+                        <img style="left: 0px;" class="position-relative ms-auto me-auto" src="https://cdn.discordapp.com/attachments/918909240414994442/1033075366249640017/image0.jpg" width="120">
+                        <p class="ms-auto me-auto fs-5 fw-normal mb-0">Jezzy</p>
+                        <kbd style="width: max-content;font-size: 12px; background-color: #efb7ce; color: #8b2052; margin: auto 0; margin-left: 10px" class="fw-lighter ms-auto me-auto mt-1">back-end</kbd>
+                        <p class="fs-6 fw-lighter me-auto ms-auto mt-1 mb-0">Profession: <span class="fw-normal">LUA</span></p>
+                        <a class="ms-auto me-auto" target="_blank" href="https://discord.com/users/224135287880679425"><button  class="btn btn-light mt-1">Contact</button></a>
+                    </div>
+                </div>
+                <a style="width: 100%;" target="_blank" href="https://discord.gg/EwH35qbYrV"><button class="btn btn-dark mt-4 fw-semibold" style="width: 100%; background-color: #EDF6F9; color: #0F1311;">Join Lunny Developments Discord Server</button></a>
+                <a style="width: 100%;" target="_blank" href="https://discord.gg/8kVDS6PjDx"><button class="btn btn-dark mt-2 fw-semibold" style="width: 100%; background-color: #CCF281; color: #4832D5;">Join Kraken Community Discord Server</button></a>
+            </div>
+            <div class="d-flex mb-5" style="flex-direction: column;">
+               <div class='wrapper'>
+                <div role='button' class='retro-btn warning'>
+                  <a class='btn'> 
+                    <span class='btn-inner'>
+                      <span class='content-wrapper'>
+                        <span class='btn-content'>
+                          <span class='btn-content-inner' style="font-family: lores-12-bold-alt-oakland, sans-serif; font-size: 13px">
+                            Get to the top of the page
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+        </main>
+        <footer class="mt-auto text-white-50">
+            <br>
+            <br>
+            <p style="opacity: 0.7; font-size: 12px; margin-bottom: 1px;"> Created by <a href="https://instagram.com/miraccozcan" target="_blank" class="text-white text-decoration-none">@miraccozcan</a>.</p>
+            <p class="fs-7" style="opacity: 0.7; font-size: 14px;"> GTA Cure © 2022</p>
+        </footer>
+    </div>
+</body>
+<script>
+    $('.warning').click(function() {
+        $("main").animate({scrollTop: $("main").offset().top});
+
+    });
+    
+    //
+// ---Retro Button---
+//
+var buttons = document.querySelectorAll('.btn');
+
+for(var i = 0; i < buttons.length; i++) {
+  // Click
+  buttons[i].addEventListener('mousedown', function() {
+    this.classList.add('btn-active');
+  });
+  buttons[i].addEventListener('mouseup', function() {
+    this.classList.remove('btn-active');
+  });
+
+  // Hover
+  buttons[i].addEventListener('mouseleave', function() {
+    this.classList.remove('btn-center', 'btn-right', 'btn-left', 'btn-active');
+  });
+
+  buttons[i].addEventListener("mousemove", function(e) {
+    var leftOffset = this.getBoundingClientRect().left;
+    var btnWidth = this.offsetWidth;
+    var myPosX = e.pageX;
+    var newClass = "";
+    // if on left 1/3 width of btn
+    if(myPosX < (leftOffset + .3 * btnWidth) ) {
+      newClass = 'btn-left'
+    } else {
+      // if on right 1/3 width of btn
+      if(myPosX > (leftOffset + .65 * btnWidth) ) {
+        newClass = 'btn-right';
+      } else {
+        newClass = 'btn-center';
+      }
+    }
+    // remove prev class
+    var clearedClassList = this.className.replace(/btn-center|btn-right|btn-left/gi, "").trim();
+    this.className = clearedClassList + " " + newClass;
+  });
+}
+
+
+//
+// ---Retro Submit Button---
+//
+var pButton = document.querySelector('.loader-button');
+
+// Click
+pButton.addEventListener('mousedown', function() {
+  this.classList.add('btn-active');
+});
+pButton.addEventListener('mouseup', function() {
+  this.classList.remove('btn-active');
+});
+
+
+// Classie Helper Functions
+// https://github.com/desandro/classie
+
+function classReg( className ) {
+  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+}
+
+// classList support for class management
+// altho to be fair, the api sucks because it won't accept multiple classes at once
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+  hasClass = function( elem, c ) {
+    return elem.classList.contains( c );
+  };
+  addClass = function( elem, c ) {
+    elem.classList.add( c );
+  };
+  removeClass = function( elem, c ) {
+    elem.classList.remove( c );
+  };
+}
+else {
+  hasClass = function( elem, c ) {
+    return classReg( c ).test( elem.className );
+  };
+  addClass = function( elem, c ) {
+    if ( !hasClass( elem, c ) ) {
+      elem.className = elem.className + ' ' + c;
+    }
+  };
+  removeClass = function( elem, c ) {
+    elem.className = elem.className.replace( classReg( c ), ' ' );
+  };
+}
+
+function toggleClass( elem, c ) {
+  var fn = hasClass( elem, c ) ? removeClass : addClass;
+  fn( elem, c );
+}
+
+var classie = {
+  // full names
+  hasClass: hasClass,
+  addClass: addClass,
+  removeClass: removeClass,
+  toggleClass: toggleClass,
+  // short names
+  has: hasClass,
+  add: addClass,
+  remove: removeClass,
+  toggle: toggleClass
+};
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+  // AMD
+  define( classie );
+} else {
+  // browser global
+  window.classie = classie;
+}
+
+
+// Loader Progress Functionality
+
+function extend( a, b ) {
+  for( var key in b ) { 
+    if( b.hasOwnProperty( key ) ) {
+      a[key] = b[key];
+    }
+  }
+  return a;
+}
+
+function LoaderButton( el, options ) {
+  this.button = el;
+  this.options = extend( {}, this.options );
+  extend( this.options, options );
+  this._init();
+}
+
+LoaderButton.prototype.options = {
+  statusTime : 1500
+};
+
+LoaderButton.prototype._init = function() {
+  this._create();
+  this._initEvents();
+};
+
+LoaderButton.prototype._create = function() {
+  var textEl = document.createElement( 'span' );
+  textEl.className = 'content';
+  textEl.innerHTML = this.button.innerHTML;
+  var progressEl = document.createElement( 'span' );
+  progressEl.className = 'progress';
+  
+  var progressInnerEl = document.createElement( 'span' );
+  progressInnerEl.className = 'progress-inner';
+  progressEl.appendChild( progressInnerEl );
+  
+  this.button.innerHTML = '';
+
+  this.button.appendChild( textEl );
+  this.button.appendChild( progressEl );
+
+  // element for progress bar
+  this.progress = progressInnerEl;
+
+  this.progressProp = 'width';
+  this._enable();
+};
+
+LoaderButton.prototype._setProgress = function( val ) {
+  this.progress.style[ this.progressProp ] = 100 * val + '%';
+};
+
+LoaderButton.prototype._initEvents = function() {
+  var self = this;
+  this.button.addEventListener( 'click', function() {
+    // disable button
+    self.button.setAttribute( 'disabled', '' );
+    // add class state-loading to button
+    classie.remove( self.progress, 'notransition' );
+    classie.add( this, 'state-loading' );
+
+    setTimeout( function() {
+      if( typeof self.options.callback === 'function' ) {
+        self.options.callback( self );
+      }
+      else {
+        self._setProgress( 1 );
+        var onEndTransFn = function( ev ) {
+          if( ev.propertyName !== self.progressProp ) { 
+            return; 
+          }
+          this.removeEventListener( 'transitionend', onEndTransFn );
+          self._stop();
+        };
+
+        self.progress.addEventListener( 'transitionend', onEndTransFn );
+      }
+    }, 
+    200 ); // 200ms timeout
+  } );
+};
+
+LoaderButton.prototype._stop = function( status ) {
+  var self = this;
+
+  setTimeout( function() {
+    // fade out progress bar
+    self.progress.style.opacity = 0;
+    var onEndTransFn = function( ev ) {
+      if( ev.propertyName !== 'opacity' ) return;
+      this.removeEventListener( 'transitionend', onEndTransFn );
+      classie.add( self.progress, 'notransition' );
+      self.progress.style[ self.progressProp ] = '0%';
+      self.progress.style.opacity = 1;
+    };
+    
+    self.progress.addEventListener( 'transitionend', onEndTransFn );
+    
+    // add class state-success to button
+    if( typeof status === 'number' ) {
+      var statusClass = status >= 0 ? 'state-success' : 'state-error';
+      classie.add( self.button, statusClass );
+      // after options.statusTime remove status icon
+      setTimeout( function() {
+        classie.remove( self.button, statusClass );
+        self._enable();
+      }, self.options.statusTime );
+    }
+    else {
+      self._enable();
+    }
+
+    // remove class state-loading from the button
+    classie.remove( self.button, 'state-loading' );
+  }, 100 );
+};
+
+// enable button
+LoaderButton.prototype._enable = function() {
+  this.button.removeAttribute( 'disabled' );
+}
+
+// add to global namespace
+window.LoaderButton = LoaderButton;
+
+
+// Initialize Submit Button
+
+[].slice.call( document.querySelectorAll( 'button.loader-button' ) ).forEach( function( bttn ) {
+  new LoaderButton( bttn, {
+    callback : function( instance ) {
+      var progress = 0,
+          interval = setInterval( function() {
+            // progress is randomly calculated
+            progress = Math.min( progress + Math.random() * 0.1, 1 );
+            instance._setProgress( progress );
+
+            if( progress === 1 ) {
+              instance._stop(1);
+              clearInterval( interval );
+            }
+          }, 200 ); // 200ms interval
+    }
+  } );
+} );
+</script>
+</html>
