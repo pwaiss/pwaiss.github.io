@@ -508,21 +508,8 @@
         .past:hover .xp-logo img.invert { filter: brightness(0) invert(1); opacity: 0.9; }
 
         /* Referanslar */
-        .work { display: grid; grid-template-columns: 1.35fr 1fr; }
-
-        .work-shot { overflow: hidden; border-right: 1px solid var(--line); background: #0e1116; }
-        .work-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top left; transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
-        .work:hover .work-shot img { transform: scale(1.03); }
-
-        .work-meta { display: flex; flex-direction: column; justify-content: space-between; gap: 24px; padding: 26px; }
-        .work-meta h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; margin-top: 10px; }
-        .work-meta p { font-size: 14.5px; color: var(--muted); margin-top: 8px; }
-
         .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
         .tags span { padding: 3px 9px; border-radius: 6px; border: 1px solid var(--line); font-size: 12px; color: var(--muted); }
-
-        .work-link { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 13px; color: var(--muted); }
-        .work:hover .work-link { color: var(--text); }
 
         .ref-group + .ref-group { margin-top: 40px; }
         .ref-group > .label { display: block; margin-bottom: 12px; }
@@ -535,6 +522,8 @@
         .project-media img, .project-media iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
         .project-media img { filter: saturate(0.85) brightness(0.88); transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.4s ease; }
         .project:hover .project-media img { transform: scale(1.03); filter: none; }
+        .project-media.shot img { object-position: top; }
+        a.project:hover .ext-link { color: var(--text); }
 
         /* Video sadece tıklanınca yüklenir */
         .play { position: absolute; inset: 0; display: grid; place-items: center; border: 0; background: transparent; color: #fff; cursor: pointer; }
@@ -560,9 +549,9 @@
         .project-body p { font-size: 14px; color: var(--muted); margin-top: 6px; }
         .project-body .tags { margin-top: auto; padding-top: 16px; }
 
-        .yt-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 12px; color: var(--faint); transition: color 0.2s ease; }
-        .yt-link:hover { color: var(--text); }
-        .yt-link .arrow { width: 13px; height: 13px; }
+        .ext-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 12px; color: var(--faint); transition: color 0.2s ease; }
+        .ext-link:hover { color: var(--text); }
+        .ext-link .arrow { width: 13px; height: 13px; }
 
         /* Eğitim */
         .edu { position: relative; padding-left: 28px; }
@@ -701,8 +690,6 @@
         @media (max-width: 820px) {
             .bento { grid-template-columns: repeat(2, 1fr); }
             .tile-about, .tile-discord, .tile-spotify { grid-column: span 2; grid-row: auto; }
-            .work { grid-template-columns: 1fr; }
-            .work-shot { border-right: 0; border-bottom: 1px solid var(--line); aspect-ratio: 16 / 9; }
         }
 
         @media (max-width: 600px) {
@@ -974,7 +961,7 @@
                         <div class="project-body">
                             <div class="project-top">
                                 <span class="label" lang="en">Tworst</span>
-                                <a class="yt-link" href="https://www.youtube.com/watch?v=twM2VU6JBwk" target="_blank" rel="noopener">youtube <svg class="arrow"><use href="#i-arrow"/></svg></a>
+                                <a class="ext-link" href="https://www.youtube.com/watch?v=twM2VU6JBwk" target="_blank" rel="noopener">youtube <svg class="arrow"><use href="#i-arrow"/></svg></a>
                             </div>
                             <h3>Admin Menü</h3>
                             <p>Web paneli, Discord bağlantısı ve canlı izleme özellikli bir yönetim menüsü. Backend'i ben yazdım, arayüzü de backend'e ben bağladım.</p>
@@ -990,7 +977,7 @@
                         <div class="project-body">
                             <div class="project-top">
                                 <span class="label" lang="en">NProbleM</span>
-                                <a class="yt-link" href="https://www.youtube.com/watch?v=kpep99jBSu0&amp;t=182s" target="_blank" rel="noopener">youtube <svg class="arrow"><use href="#i-arrow"/></svg></a>
+                                <a class="ext-link" href="https://www.youtube.com/watch?v=kpep99jBSu0&amp;t=182s" target="_blank" rel="noopener">youtube <svg class="arrow"><use href="#i-arrow"/></svg></a>
                             </div>
                             <h3>Dealership</h3>
                             <p>Finansman desteği olan gerçekçi bir galeri sistemi. Scriptteki arayüzlerin Figma tasarımlarını HTML, CSS ve JavaScript ile koda döktüm.</p>
@@ -1006,7 +993,7 @@
                         <div class="project-body">
                             <div class="project-top">
                                 <span class="label" lang="en">NProbleM</span>
-                                <a class="yt-link" href="https://www.youtube.com/watch?v=KH-J8R4GMTQ" target="_blank" rel="noopener">youtube <svg class="arrow"><use href="#i-arrow"/></svg></a>
+                                <a class="ext-link" href="https://www.youtube.com/watch?v=KH-J8R4GMTQ" target="_blank" rel="noopener">youtube <svg class="arrow"><use href="#i-arrow"/></svg></a>
                             </div>
                             <h3>Newspaper</h3>
                             <p>Oyun içi gazetecilik sistemi. Gazete düzenleyicisi dahil frontend'in tamamını ben geliştirdim.</p>
@@ -1022,7 +1009,7 @@
                         <div class="project-body">
                             <div class="project-top">
                                 <span class="label" lang="en">NProbleM</span>
-                                <a class="yt-link" href="https://www.youtube.com/watch?v=YD7dKiLwmUE" target="_blank" rel="noopener">youtube <svg class="arrow"><use href="#i-arrow"/></svg></a>
+                                <a class="ext-link" href="https://www.youtube.com/watch?v=YD7dKiLwmUE" target="_blank" rel="noopener">youtube <svg class="arrow"><use href="#i-arrow"/></svg></a>
                             </div>
                             <h3>Business Card</h3>
                             <p>Oyuncuların kendi kartvizitlerini hazırlayabildiği bir script. Frontend'in tamamı bana ait.</p>
@@ -1034,18 +1021,33 @@
 
             <div class="ref-group">
                 <span class="label" lang="en" data-reveal>Web</span>
-                <a class="tile work" href="https://www.serinsondajsu.com" target="_blank" rel="noopener" data-reveal>
-                    <div class="work-shot"><img src="assets/work/serinsondaj.jpg" alt="serinsondajsu.com ana sayfası" loading="lazy"></div>
-                    <div class="work-meta">
-                        <div>
-                            <span class="label">Kurumsal site</span>
+                <div class="projects">
+                    <a class="tile project" href="https://www.novarp.org" target="_blank" rel="noopener" data-reveal>
+                        <div class="project-media shot"><img src="assets/work/novarp.jpg" alt="novarp.org ana sayfası" loading="lazy"></div>
+                        <div class="project-body">
+                            <div class="project-top">
+                                <span class="label">Topluluk sitesi</span>
+                                <span class="ext-link">novarp.org <svg class="arrow"><use href="#i-arrow"/></svg></span>
+                            </div>
+                            <h3>Nova Roleplay</h3>
+                            <p>FiveM ve RedM sunucularını tek çatı altında toplayan Türk roleplay topluluğunun sitesi. Başvuru, ekip, yayınlar, etkinlikler ve dokümanlar.</p>
+                            <div class="tags"><span>Tasarım</span><span>Geliştirme</span></div>
+                        </div>
+                    </a>
+
+                    <a class="tile project" href="https://www.serinsondajsu.com" target="_blank" rel="noopener" data-reveal style="--i:1">
+                        <div class="project-media shot"><img src="assets/work/serinsondaj.jpg" alt="serinsondajsu.com ana sayfası" loading="lazy"></div>
+                        <div class="project-body">
+                            <div class="project-top">
+                                <span class="label">Kurumsal site</span>
+                                <span class="ext-link">serinsondajsu.com <svg class="arrow"><use href="#i-arrow"/></svg></span>
+                            </div>
                             <h3>Serin Sondaj Su</h3>
                             <p>Ankara'da su kuyusu ve sondaj hizmeti veren bir firma için. Hizmetler, referanslar, galeri ve tek tıkla arama / WhatsApp.</p>
                             <div class="tags"><span>Tasarım</span><span>Geliştirme</span></div>
                         </div>
-                        <span class="work-link">serinsondajsu.com <svg class="arrow"><use href="#i-arrow"/></svg></span>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </section>
 
